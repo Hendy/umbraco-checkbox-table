@@ -182,5 +182,10 @@
     <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\CheckboxTable.css" />
+    <EmbeddedResource Include="Resources\CheckboxTable.html" />
+    <EmbeddedResource Include="Resources\CheckboxTable.js" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

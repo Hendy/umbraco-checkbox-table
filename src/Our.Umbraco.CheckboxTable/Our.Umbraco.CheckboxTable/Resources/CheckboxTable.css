@@ -1,0 +1,18 @@
+﻿.checkbox-table th {
+    height: 160px;
+}
+
+.checkbox-table th span {
+    display: inline-block;
+    transform:  translate(20px, 50px)
+                rotate(320deg);
+    width: 55px;
+}
+
+.checkbox-table input.active {
+    background-color: #f3f3f5;
+}
+
+.checkbox-table td {
+    text-align:center;
+}

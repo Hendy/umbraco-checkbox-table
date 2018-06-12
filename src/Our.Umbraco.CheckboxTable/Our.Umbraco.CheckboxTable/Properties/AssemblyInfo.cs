@@ -1,6 +1,7 @@
 ﻿using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
+using Our.Umbraco.EmbeddedResource;
 
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
@@ -34,3 +35,8 @@ using System.Runtime.InteropServices;
 // [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyVersion("1.0.0.0")]
 [assembly: AssemblyFileVersion("1.0.0.0")]
+
+// register the embedded resoures (authenticated Umbraco users only)
+[assembly: EmbeddedResource("Our.Umbraco.CheckboxTable.Resources.CheckboxTable.css", "~/App_Plugins/CheckboxTable/CheckboxTable.css", true)]
+[assembly: EmbeddedResource("Our.Umbraco.CheckboxTable.Resources.CheckboxTable.html", "~/App_Plugins/CheckboxTable/CheckboxTable.html", true)]
+[assembly: EmbeddedResource("Our.Umbraco.CheckboxTable.Resources.CheckboxTable.js", "~/App_Plugins/CheckboxTable/CheckboxTable.js", true)]

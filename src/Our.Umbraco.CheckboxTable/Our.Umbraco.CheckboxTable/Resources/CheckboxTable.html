@@ -1,0 +1,34 @@
+﻿﻿<div ng-controller="CheckBoxTableController" class="checkbox-table">
+
+    <table>
+        <thead>
+            <tr>
+                <th ng-repeat="x in model.value[0] track by $index" ng-init="columnIndex = $index">
+                    <span ng-if="columnIndex > 0"><!-- ignore row labels column -->
+                        <input type="text" ng-model="model.value[0][columnIndex]" ng-class="{ 'active' : columnIndex == activeColumn }" />
+                    </span>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="x in model.value | limitTo: 1 - model.value.length track by $index" ng-init="rowIndex = $index + 1"><!-- skip header row -->
+                <td ng-repeat="y in x track by $index" ng-init="columnIndex = $index">
+
+                    <input type="text" 
+                           ng-model="model.value[rowIndex][0]" 
+                           ng-class="{'active' : rowIndex == activeRow }"
+                           ng-if="columnIndex == 0" />
+
+                    <input type="checkbox" 
+                           ng-model="model.value[rowIndex][columnIndex]" 
+                           ng-if="columnIndex > 0"
+                           ng-mouseover="setActiveRowColumn(rowIndex, columnIndex)" 
+                           ng-mouseleave="clearActiveRowColumn()"
+                           title="[{{ model.value[rowIndex][0] }}] + [{{ model.value[0][columnIndex] }}]" />
+
+                </td>         
+            </tr>
+        </tbody>
+    </table>
+    
+</div>
