@@ -176,10 +176,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Converters\PropertyValueConverter.cs" />
+    <Compile Include="Converters\CheckBoxTablePropertyValueConverter.cs" />
     <Compile Include="Models\CheckboxTable.cs" />
     <Compile Include="Models\CheckboxTableRow.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PropertyEditors\CheckboxTablePreValueEditor.cs" />
+    <Compile Include="PropertyEditors\CheckboxTablePropertyEditor.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
@@ -190,5 +192,6 @@
     <EmbeddedResource Include="Resources\CheckboxTable.html" />
     <EmbeddedResource Include="Resources\CheckboxTable.js" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
