@@ -176,6 +176,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Converters\PropertyValueConverter.cs" />
     <Compile Include="Models\CheckboxTable.cs" />
     <Compile Include="Models\CheckboxTableRow.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
