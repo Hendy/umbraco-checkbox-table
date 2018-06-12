@@ -19,6 +19,5 @@
   </metadata>
   <files>
     <file src="..\src\Our.Umbraco.CheckboxTable\bin\Release\Our.Umbraco.CheckboxTable.dll" target="lib\net45"></file>
-    <file src="..\README.md" target=""></file>
   </files>
 </package>
