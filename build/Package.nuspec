@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Our.Umbraco.CheckboxTable</id>
+    <version>0.1.0</version>
+    <authors>Hendy Racher</authors>
+    <owners>Hendy Racher</owners>
+    <licenseUrl>https://github.com/Hendy/umbraco-checkbox-table/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/Hendy/umbraco-checkbox-table</projectUrl>
+    <!--<iconUrl>http://ICON_URL_HERE_OR_DELETE_THIS_LINE</iconUrl>-->
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Property editor (and value converter) for a table with row / column text and checkbox cells</description>
+    <releaseNotes></releaseNotes>
+    <copyright>Copyright 2018</copyright>
+    <tags>Umbraco</tags>
+    <dependencies>
+      <dependency id="Our.Umbraco.EmbeddedResource" version="0.1.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="..\src\Our.Umbraco.CheckboxTable\bin\Release\Our.Umbraco.CheckboxTable.dll" target="lib\net45"></file>
+    <file src="..\README.md" target=""></file>
+  </files>
+</package>
