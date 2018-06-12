@@ -1,5 +1,6 @@
 ﻿using Newtonsoft.Json.Linq;
 using Our.Umbraco.CheckboxTable.Models;
+using Our.Umbraco.CheckboxTable.PropertyEditors;
 using System.Collections.Generic;
 using System.Linq;
 using Umbraco.Core.Models.PublishedContent;
@@ -18,7 +19,7 @@ namespace Our.Umbraco.CheckboxTable.Converters
         /// <returns></returns>
         public override bool IsConverter(PublishedPropertyType publishedPropertyType)
         {
-            return publishedPropertyType.PropertyEditorAlias == "checkboxTable";
+            return publishedPropertyType.PropertyEditorAlias == CheckboxTablePropertyEditor.PropertyEditorAlias;
         }
 
         /// <summary>
