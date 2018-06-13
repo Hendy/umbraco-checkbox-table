@@ -1,5 +1,5 @@
 # Umbraco Checkbox Table
-Property editor (and value converter) for a table with row / column text and checkbox cells
+Property editor for a table with editable row/column labels and toggleable cells.
 
 ## Property Editor
 
@@ -11,7 +11,10 @@ Property editor (and value converter) for a table with row / column text and che
 
 ## Model Rendering
 
-The built in property-value-converter will return a strongly typed model of type: Our.Umbraco.CheckboxTable.Models.CheckboxTable
+	@{
+		// strongly-typed model
+		Our.Umbraco.CheckboxTable.Models.CheckboxTable checkboxTable; 
+	}
 
     <table>
         <tr>
