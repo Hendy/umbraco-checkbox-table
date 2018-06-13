@@ -13,6 +13,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{B8F49852-D36F-4B34-8A1B-BF5F72C00125}"
 	ProjectSection(SolutionItems) = preProject
 		..\build\Package.nuspec = ..\build\Package.nuspec
+		..\build\Package.xml = ..\build\Package.xml
 	EndProjectSection
 EndProject
 Global

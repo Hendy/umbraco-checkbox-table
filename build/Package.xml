@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<umbPackage>
+  
+  <info>
+    
+    <package>
+      <name>Checkbox Table</name>
+      <version>0.1.0</version>
+      <license url="https://github.com/Hendy/umbraco-checkbox-table/blob/master/LICENSE">license</license>
+      <url>https://github.com/Hendy/umbraco-checkbox-table</url>
+      <requirements>
+        <major>7</major>
+        <minor>2</minor>
+        <patch>3</patch>
+      </requirements>
+    </package>
+    
+    <author>
+      <name>Hendy Racher</name>
+      <website>https://github.com/Hendy/umbraco-checkbox-table/graphs/contributors</website>
+    </author>
+    
+    <readme>
+      <![CDATA[Property editor (and value converter) for a table with row / column text and checkbox cells]]>
+    </readme>
+    
+  </info>
+
+  <DocumentTypes/>
+
+  <Templates/>
+
+  <Stylesheets/>
+
+  <Macros/>
+
+  <DictionaryItems/>
+
+  <Languages/>
+
+  <DataTypes/>
+
+  <Actions/>
+
+  <control/>
+
+  <files>
+    <file>
+      <guid>082a7ef8-5ae1-4c40-9e4c-55f69cb81309.dll</guid>
+      <orgPath>/bin</orgPath>
+      <orgName>Our.Umbraco.CheckboxTable.dll</orgName>
+    </file>
+    <file>
+      <guid>a3ccbfc3-74a9-4672-9b08-506986adfe3e.dll</guid>
+      <orgPath>/bin</orgPath>
+      <orgName>Our.Umbraco.EmbeddedResource.dll</orgName>
+    </file>
+  </files>
+
+</umbPackage>
