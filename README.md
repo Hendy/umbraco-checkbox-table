@@ -1,20 +1,23 @@
 # Umbraco Checkbox Table
 Property editor for a table with editable row/column labels and toggleable cells.
 
+
 ## Property Editor
 
 ![Property Editor Example](docs/PropertyEditor.png)
     
+
 ## Property Editor Configuration
 
 ![Property Editor Configuration Example](docs/PropertyEditorConfiguration.png)
 
+
 ## Model Rendering
 
-	@{
-		// strongly-typed model
-		Our.Umbraco.CheckboxTable.Models.CheckboxTable checkboxTable; 
-	}
+    @{
+        // strongly-typed model
+        var Our.Umbraco.CheckboxTable.Models.CheckboxTable checkboxTable; 
+    }
 
     <table>
         <tr>
