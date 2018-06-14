@@ -21,7 +21,7 @@
     </author>
     
     <readme>
-      <![CDATA[Property editor (and value converter) for a table with row / column text and checkbox cells]]>
+      <![CDATA[Property editor for a table with editable row/column labels and toggleable cells.]]>
     </readme>
     
   </info>
