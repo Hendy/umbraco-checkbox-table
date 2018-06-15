@@ -15,13 +15,13 @@ Property editor for a table with editable row/column labels and toggleable cells
 ## Model Rendering
 
     @{
-        // strongly-typed model
-        var Our.Umbraco.CheckboxTable.Models.CheckboxTable checkboxTable; 
+        // model (as would be set)
+        Our.Umbraco.CheckboxTable.Models.CheckboxTable checkboxTable; 
     }
 
     <table>
         <tr>
-            <th></th>
+            <th></th> <!-- irrelevant cell -->
             @foreach (var columnLabel in checkboxTable.ColumnLabels)
             {
                 <th>@columnLabel</th>
