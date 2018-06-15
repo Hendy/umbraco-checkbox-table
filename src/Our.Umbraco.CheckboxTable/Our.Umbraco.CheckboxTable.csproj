@@ -96,8 +96,8 @@
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.6.0.5\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="Our.Umbraco.EmbeddedResource, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Our.Umbraco.EmbeddedResource.0.1.0\lib\net45\Our.Umbraco.EmbeddedResource.dll</HintPath>
+    <Reference Include="Our.Umbraco.EmbeddedResource, Version=0.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Our.Umbraco.EmbeddedResource.0.2.0\lib\net45\Our.Umbraco.EmbeddedResource.dll</HintPath>
     </Reference>
     <Reference Include="SQLCE4Umbraco, Version=1.0.5556.26332, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\UmbracoCms.Core.7.2.3\lib\SQLCE4Umbraco.dll</HintPath>
