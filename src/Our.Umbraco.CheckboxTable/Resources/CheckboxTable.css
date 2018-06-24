@@ -16,3 +16,10 @@
 .checkbox-table td {
     text-align:center;
 }
+
+
+
+/* prevalue styling tweak */
+.checkbox-table li label small {
+    display:inline;
+}

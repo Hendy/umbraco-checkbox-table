@@ -1,28 +1,28 @@
 ﻿
 
-<ul class="unstyled"
+<ul class="unstyled checkbox-table"
     ng-init="model.value = model.value || 'readOnly'">
     <li>
         <label>
             <input type="radio" ng-model="model.value" value="readOnly" />
-            Read Only Labels
-            <!--<small>Default labels are read only</small>-->
+            Read Only
+            <small>the axis labels will be read only</small>
         </label>
     </li>
 
     <li>
         <label>
             <input type="radio" ng-model="model.value" value="editable" />
-            Editable Labels
-            <!--<small>Default labels can be edited</small>-->
+            Editable
+            <small>the axis labels will be editable</small>
         </label>
     </li>
 
     <li>
         <label>
             <input type="radio" ng-model="model.value" value="addRemove" />
-            Add / Remove
-            <!--<small>Full control</small>-->
+            Add/Remove
+            <small>full control of the axis</small>
         </label>
     </li>
 
