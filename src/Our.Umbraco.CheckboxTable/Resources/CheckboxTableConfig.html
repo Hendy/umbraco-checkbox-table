@@ -1,5 +1,63 @@
-﻿﻿<div ng-controller="CheckBoxTableConfigController" class="checkbox-table">
+﻿﻿<div ng-controller="CheckboxTableConfigController" class="checkbox-table">
+
+   <div>
+        <label class="control-label">
+            Checkbox Table
+            <small>The initial state for </small>
+        </label>
+
+        <div class="controls">
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+        </div>
+    </div>
+
+   <hr/>
+
+   <div>
+        <label class="control-label">
+            Column Permissions
+            <small></small>
+        </label>
+
+        <div class="controls">
+
+            <select ng-model="columnPermissions">
+                <option value="readOnly">Read Only Column Labels</option>
+                <option value="editable">Editable Column Labels</option>
+                <option value="addRemove">Add / Remove Columns</option>
+            </select>
+
+        </div>
+    </div>
+
+    <hr/>
+
+    <div>
+        <label class="control-label">
+            Row Permissions
+            <small></small>
+        </label>
+
+        <div class="controls">
+            <select ng-model="rowPermissions">
+                <option value="readOnly">Read Only Row Labels</option>
+                <option value="editable">Editable Row Labels</option>
+                <option value="addRemove">Add / Remove Rows</option>
+            </select>
+        </div>
+    </div>
 
 
-    
+
 </div>
