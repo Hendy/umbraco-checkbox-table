@@ -4,11 +4,11 @@
 
     angular
         .module("umbraco")
-        .controller("CheckBoxTableConfigController", CheckBoxTableConfigController);
+        .controller("CheckboxTableConfigController", CheckboxTableConfigController);
 
-    CheckBoxTableConfigController.$inject = ['$scope'];
+    CheckboxTableConfigController.$inject = ['$scope'];
 
-    function CheckBoxTableConfigController($scope) {
+    function CheckboxTableConfigController($scope) {
 
       
     }

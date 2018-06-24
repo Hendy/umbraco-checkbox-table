@@ -4,11 +4,11 @@
 
     angular
         .module("umbraco")
-        .controller("CheckBoxTableController", CheckBoxTableController);
+        .controller("CheckboxTableController", CheckboxTableController);
 
-    CheckBoxTableController.$inject = ['$scope'];
+    CheckboxTableController.$inject = ['$scope'];
 
-    function CheckBoxTableController($scope) {
+    function CheckboxTableController($scope) {
 
         $scope.setActiveRowColumn = function (rowIndex, columnIndex) {
             $scope.activeRow = rowIndex;
