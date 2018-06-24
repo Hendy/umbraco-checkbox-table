@@ -1,0 +1,29 @@
+﻿
+
+<ul class="unstyled"
+    ng-init="model.value = model.value || 'readOnly'">
+    <li>
+        <label>
+            <input type="radio" ng-model="model.value" value="readOnly" />
+            Read Only Labels
+            <!--<small>Default labels are read only</small>-->
+        </label>
+    </li>
+
+    <li>
+        <label>
+            <input type="radio" ng-model="model.value" value="editable" />
+            Editable Labels
+            <!--<small>Default labels can be edited</small>-->
+        </label>
+    </li>
+
+    <li>
+        <label>
+            <input type="radio" ng-model="model.value" value="addRemove" />
+            Add / Remove
+            <!--<small>Full control</small>-->
+        </label>
+    </li>
+
+</ul>
