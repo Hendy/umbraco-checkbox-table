@@ -8,48 +8,52 @@
 
     CheckboxTableController.$inject = ['$scope'];
 
+    // this will become the main controller for both an editor connfig and the property editor
     function CheckboxTableController($scope) {
 
-        $scope.setActiveRowColumn = function (rowIndex, columnIndex) {
-            $scope.activeRow = rowIndex;
-            $scope.activeColumn = columnIndex;
-        }
-
-        $scope.clearActiveRowColumn = function () {
-            $scope.activeRow = -1;
-            $scope.activeColumn = -1;
-        }
-
-        var columnCount = parseInt($scope.model.config.columns) + 1;
-        var rowCount = parseInt($scope.model.config.rows) + 1;
-
-        $scope.clearActiveRowColumn();
-
-        $scope.model.value = buildTableData(rowCount, columnCount, $scope.model.value);
-    }
-
-    function buildTableData(rowCount, columnCount, modelValue) {
-            
-        var tableData = new Array(rowCount); // first index in array is y axis (html rendering tr)
-
-        for (var rowCounter = 0; rowCounter < rowCount; rowCounter ++)
-        {
-            tableData[rowCounter] = new Array(columnCount); // second index is x axis (html rendering td)
-
-            for (var columnCounter = 0; columnCounter < columnCount; columnCounter++)
-            {
-                if (angular.isArray(modelValue) && rowCounter < modelValue.length && columnCounter < modelValue[0].length) {                    
-                    tableData[rowCounter][columnCounter] = modelValue[rowCounter][columnCounter]; // restore saved value
-                } else if (rowCounter == 0 || columnCounter == 0)  {                    
-                    tableData[rowCounter][columnCounter] = ""; // new header label or row label  
-                } else {                    
-                    tableData[rowCounter][columnCounter] = false; // new checkbox cell
-                }
-            }
-        }
-
-        return tableData;
-    }
    
+        // if this being used as the prevalue editor, create fake config
+        if (angular.equals($scope.model.config, {})) {
+            console.log('in config mode');
+
+            $scope.model.config = {
+                defaultCheckboxTable: {
+                    columns: [],
+                    rows: [],
+                    cells: []
+                },
+                columnPermissions: 'addRemove',
+                rowPermissions: 'addRemove'
+            };
+        }
+
+        // v0.2.0 saved array data, whilst v0.3.0 saves an object - here we clear any legacy saved values to prevent errors
+        if (angular.isArray($scope.model.value)) { $scope.model.value = null; }
+
+        $scope.model.value = $scope.model.value || $scope.model.config.defaultCheckboxTable;
+
+        // watch the columns collection and rows collection, and on change, update cells (so we can sort cols in future)
+        $scope.$watch('model.value.columns', function (newColumns, oldColumns) {
+        }, true); // NOTE: bug in Angular $watchCollection, doesn't return the old value correctly, so using deep $watch instead
+
+        $scope.$watch('model.value.rows', function (newRows, oldRows) { 
+        }, true); // NOTE: bug in Angular $watchCollection, doesn't return the old value correctly, so using deep $watch instead
+
+        $scope.addColumn = function () {
+            $scope.model.value.columns.push('');
+        };
+
+        $scope.removeColumn = function (columnIndex) {
+            $scope.model.value.columns.splice(columnIndex, 1);
+        };
+
+        $scope.addRow = function () {
+            $scope.model.value.rows.push('');
+        };
+
+        $scope.removeRow = function (rowIndex) {
+            $scope.model.value.rows.splice(rowIndex, 1);
+        };
+    }
 
 })();

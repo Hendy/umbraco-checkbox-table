@@ -23,3 +23,15 @@
 .checkbox-table li label small {
     display:inline;
 }
+
+.checkbox-table i.icon:hover {
+    cursor:pointer;
+}
+
+.checkbox-table i.icon-add:hover {
+    color: #03bfb3; /* Umbraco green from 7.2.3 */
+}
+
+.checkbox-table i.icon-delete:hover {
+    color: #fe3e39; /* Umbraco red from 7.2.3 */
+}

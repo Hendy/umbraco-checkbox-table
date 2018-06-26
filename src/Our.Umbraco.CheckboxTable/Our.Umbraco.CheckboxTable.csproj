@@ -193,12 +193,6 @@
     <EmbeddedResource Include="Resources\CheckboxTable.js" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Resources\CheckboxTableConfig.html" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Resources\CheckboxTableConfig.js" />
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Resources\CheckboxTablePermissions.html" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -40,9 +40,5 @@ using Our.Umbraco.EmbeddedResource;
 [assembly: EmbeddedResourceProtected("Our.Umbraco.CheckboxTable.Resources.CheckboxTable.css", "~/App_Plugins/CheckboxTable/CheckboxTable.css")]
 [assembly: EmbeddedResourceProtected("Our.Umbraco.CheckboxTable.Resources.CheckboxTable.html", "~/App_Plugins/CheckboxTable/CheckboxTable.html")]
 [assembly: EmbeddedResourceProtected("Our.Umbraco.CheckboxTable.Resources.CheckboxTable.js", "~/App_Plugins/CheckboxTable/CheckboxTable.js")]
-[assembly: EmbeddedResourceProtected("Our.Umbraco.CheckboxTable.Resources.CheckboxTableConfig.html", "~/App_Plugins/CheckboxTable/CheckboxTableConfig.html")]
-[assembly: EmbeddedResourceProtected("Our.Umbraco.CheckboxTable.Resources.CheckboxTableConfig.js", "~/App_Plugins/CheckboxTable/CheckboxTableConfig.js")]
-
-//prevalues
 [assembly: EmbeddedResourceProtected("Our.Umbraco.CheckboxTable.Resources.CheckboxTablePermissions.html", "~/App_Plugins/CheckboxTable/CheckboxTablePermissions.html")]
 

@@ -3,32 +3,62 @@
     <table>
         <thead>
             <tr>
-                <th ng-repeat="x in model.value[0] track by $index" ng-init="columnIndex = $index">
-                    <span ng-if="columnIndex > 0"><!-- ignore row labels column -->
-                        <input type="text" ng-model="model.value[0][columnIndex]" ng-class="{ 'active' : columnIndex == activeColumn }" />
-                    </span>
+                <th><!-- header not used (col for the row labels) --></th>
+                <th><!-- header not used (col for remove row icons) --></th>
+                <th ng-repeat="column in model.value.columns track by $index"
+                    ng-init="columnIndex = $index">
+                    <span>
+                        <input type="text" 
+                               placeholder="Column Label"
+                               ng-model="model.value.columns[columnIndex]" />
+                    </span>                   
+                </th>
+                <th>                    
                 </th>
             </tr>
         </thead>
         <tbody>
-            <tr ng-repeat="x in model.value | limitTo: 1 - model.value.length track by $index" ng-init="rowIndex = $index + 1"><!-- skip header row -->
-                <td ng-repeat="y in x track by $index" ng-init="columnIndex = $index">
-
-                    <input type="text" 
-                           ng-model="model.value[rowIndex][0]" 
-                           ng-class="{'active' : rowIndex == activeRow }"
-                           ng-if="columnIndex == 0" />
-
-                    <input type="checkbox" 
-                           ng-model="model.value[rowIndex][columnIndex]" 
-                           ng-if="columnIndex > 0"
-                           ng-mouseover="setActiveRowColumn(rowIndex, columnIndex)" 
-                           ng-mouseleave="clearActiveRowColumn()"
-                           title="[{{ model.value[rowIndex][0] }}] + [{{ model.value[0][columnIndex] }}]" />
-
-                </td>         
+            <!-- row of remove column icons -->
+            <tr>
+                <td></td>
+                <td></td>
+                <td ng-repeat="column in model.value.columns track by $index"
+                    ng-init="columnIndex = $index">    
+                     <i class="icon icon-delete" ng-click="removeColumn(columnIndex)"></i>  
+                </td>
+                <td rowspan="{{ 1 + model.value.rows.length }}" >
+                    <i class="icon icon-add" ng-click="addColumn()" ></i>
+                </td>
             </tr>
+
+            <tr ng-repeat="row in model.value.rows track by $index"
+                ng-init="rowIndex = $index">
+                <td>
+                    <input type="text" 
+                           placeholder="Row Label"
+                           ng-model="model.value.rows[rowIndex]" />
+                </td>
+                <td>
+                    <i class="icon icon-delete" ng-click="removeRow(rowIndex)"></i>                    
+                </td>
+                <td ng-repeat="column in model.value.columns track by $index"
+                    ng-init="columnIndex = $index">
+                    
+                    <input type="checkbox" 
+                           ng-model="model.value.cells[rowIndex][columnIndex]" 
+                           title="[{{ model.value.rows[rowIndex] }}] + [{{ model.value.columns[columnIndex] }}]" />
+
+                </td>
+
+            </tr>
+            <tr>
+                <td></td>
+                <td colspan="{{ 1 + model.value.columns.length }}">
+                    <i class="icon icon-add" ng-click="addRow()"></i>
+                </td>
+            </tr>
+       
         </tbody>
     </table>
-    
+
 </div>

@@ -11,7 +11,7 @@ namespace Our.Umbraco.CheckboxTable.PropertyEditors
         [PreValueField(
             "defaultCheckboxTable", 
             "Default Checkbox Table", 
-            "/App_Plugins/CheckboxTable/CheckboxTableConfig.html",
+            "/App_Plugins/CheckboxTable/CheckboxTable.html",
             Description = "Set the default columns and rows")]
         public string DefaultCheckboxTable { get; set; }
 
