@@ -1,11 +1,15 @@
-﻿.checkbox-table th {
+﻿.checkbox-table thead {
+    background-color: transparent; /* remove Umbraco styling */
+}
+
+.checkbox-table th {
     height: 160px;
 }
 
 .checkbox-table th span {
     display: inline-block;
-    transform:  translate(20px, 50px)
-                rotate(320deg);
+    transform: translate(20px, 50px)
+               rotate(320deg);
     width: 55px;
 }
 
@@ -17,15 +21,12 @@
     text-align:center;
 }
 
-
-
-/* prevalue styling tweak */
 .checkbox-table li label small {
-    display:inline;
+    display: inline; /* prevalue styling tweak */
 }
 
 .checkbox-table i.icon:hover {
-    cursor:pointer;
+    cursor: pointer;
 }
 
 .checkbox-table i.icon-add:hover {
