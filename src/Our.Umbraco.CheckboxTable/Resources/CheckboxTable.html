@@ -10,6 +10,7 @@
                     <span>
                         <input type="text" 
                                placeholder="Column Label"
+                               ng-readonly="model.config.columnPermissions == 'readOnly'"
                                ng-model="model.value.columns[columnIndex]" />
                     </span>                   
                 </th>
@@ -40,6 +41,7 @@
                 <td>
                     <input type="text" 
                            placeholder="Row Label"
+                           ng-readonly="model.config.rowPermissions == 'readOnly'"
                            ng-model="model.value.rows[rowIndex]" />
                 </td>
                 <td>
