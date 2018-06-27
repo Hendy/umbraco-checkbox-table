@@ -2,7 +2,6 @@
 using Our.Umbraco.CheckboxTable.Models;
 using Our.Umbraco.CheckboxTable.PropertyEditors;
 using System.Collections.Generic;
-using System.Linq;
 using Umbraco.Core.Models.PublishedContent;
 using Umbraco.Core.PropertyEditors;
 
@@ -33,19 +32,35 @@ namespace Our.Umbraco.CheckboxTable.Converters
         {
             var checkboxTable = new Models.CheckboxTable();
 
-            var rows = JArray.Parse((string)source);
+            /*
+                {
+                    columns: ['Bronze', 'Silver', 'Gold'],
+                    rows: ['Feature 1', 'Feature 2'],
+                    cells: [
+                        [true, false, false], 
+                        [false, false, false]
+                    ]
+                }
+             */
 
-            checkboxTable.ColumnLabels = rows.First().Skip(1).Select(x => x.ToString()).ToArray();
+            var json = JObject.Parse((string)source);
+
+            checkboxTable.ColumnLabels = json["columns"].ToObject<string[]>();
 
             List<CheckboxTableRow> checkboxTableRows = new List<CheckboxTableRow>();
 
-            foreach (var row in rows.Skip(1))
+            var rowCounter = 0;
+
+            foreach(var row in json["rows"])
             {
-                checkboxTableRows.Add(new CheckboxTableRow()
-                {
-                    RowLabel = row.First().ToString(),
-                    Cells = row.Skip(1).Select(x => (bool)x).ToArray()
-                });
+                checkboxTableRows.Add(
+                    new CheckboxTableRow()
+                    {
+                        RowLabel = row.ToString(),
+                        Cells = json["cells"][rowCounter].ToObject<bool[]>()
+                    });
+
+                rowCounter++;
             }
 
             checkboxTable.Rows = checkboxTableRows.ToArray();
