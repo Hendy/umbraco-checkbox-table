@@ -28,13 +28,5 @@ namespace Our.Umbraco.CheckboxTable.PropertyEditors
             "/App_Plugins/CheckboxTable/CheckboxTablePermissions.html",
             Description = "Content editor permissions for the row axis")]
         public string RowPermissions { get; set; }
-
-        [Obsolete]
-        [PreValueField("columns", "Columns", "number", Description = "OBSOLETE")]
-        public int Columns { get; set; } // stacked content uses strings ?
-
-        [Obsolete]
-        [PreValueField("rows", "Rows", "number", Description = "OBSOLETE")]
-        public int Rows { get; set; }
     }
 }
