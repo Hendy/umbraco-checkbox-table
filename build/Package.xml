@@ -18,7 +18,7 @@
       <website>https://github.com/Hendy/umbraco-checkbox-table/graphs/contributors</website>
     </author>    
     <readme>
-      <![CDATA[Property editor for a table with editable row/column labels and toggleable cells.]]>
+      <![CDATA[Property editor for a table with editable rows/columns and toggleable cells.]]>
     </readme>    
   </info>
 

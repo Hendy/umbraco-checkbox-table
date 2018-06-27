@@ -9,7 +9,7 @@
     <projectUrl>https://github.com/Hendy/umbraco-checkbox-table</projectUrl>
     <!--<iconUrl>http://ICON_URL_HERE_OR_DELETE_THIS_LINE</iconUrl>-->
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>Property editor for a table with editable row/column labels and toggleable cells.</description>
+    <description>Property editor for a table with editable rows/columns and toggleable cells.</description>
     <releaseNotes></releaseNotes>
     <copyright>Copyright 2018</copyright>
     <tags>Umbraco</tags>

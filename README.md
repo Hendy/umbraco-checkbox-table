@@ -1,5 +1,5 @@
 # Umbraco Checkbox Table
-Property editor for a table with editable row/column labels and toggleable cells.
+Property editor for a table with editable rows/columns and toggleable cells.
 
 [The NuGet package](https://www.nuget.org/packages/Our.Umbraco.CheckboxTable) installs a single assembly _Our.Umbraco.CheckboxTable.dll_ which has a dependency on [Umbraco Embedded Resource](https://github.com/Hendy/umbraco-embedded-resource).
 
