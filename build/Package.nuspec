@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>Our.Umbraco.CheckboxTable</id>
-    <version>0.2.0</version>
+    <version>0.3.0</version>
     <authors>Hendy Racher</authors>
     <owners>Hendy Racher</owners>
     <licenseUrl>https://github.com/Hendy/umbraco-checkbox-table/blob/master/LICENSE</licenseUrl>

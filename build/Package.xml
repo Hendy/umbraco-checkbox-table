@@ -4,7 +4,7 @@
   <info>    
     <package>
       <name>Checkbox Table</name>
-      <version>0.2.0</version>
+      <version>0.3.0</version>
       <license url="https://github.com/Hendy/umbraco-checkbox-table/blob/master/LICENSE">license</license>
       <url>https://github.com/Hendy/umbraco-checkbox-table</url>
       <requirements>
