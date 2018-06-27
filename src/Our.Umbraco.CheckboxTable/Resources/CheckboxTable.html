@@ -24,10 +24,14 @@
                 <td></td>
                 <td ng-repeat="column in model.value.columns track by $index"
                     ng-init="columnIndex = $index">    
-                     <i class="icon icon-delete" ng-click="removeColumn(columnIndex)"></i>  
+                     <i class="icon icon-delete" 
+                        ng-if="model.config.columnPermissions == 'addRemove'"
+                        ng-click="removeColumn(columnIndex)"></i>  
                 </td>
                 <td rowspan="{{ 1 + model.value.rows.length }}" >
-                    <i class="icon icon-add" ng-click="addColumn()" ></i>
+                    <i class="icon icon-add" 
+                       ng-if="model.config.columnPermissions == 'addRemove'"
+                       ng-click="addColumn()" ></i>
                 </td>
             </tr>
 
@@ -39,7 +43,9 @@
                            ng-model="model.value.rows[rowIndex]" />
                 </td>
                 <td>
-                    <i class="icon icon-delete" ng-click="removeRow(rowIndex)"></i>                    
+                    <i class="icon icon-delete" 
+                       ng-if="model.config.rowPermissions == 'addRemove'"
+                       ng-click="removeRow(rowIndex)"></i>                    
                 </td>
                 <td ng-repeat="column in model.value.columns track by $index"
                     ng-init="columnIndex = $index">
@@ -54,7 +60,9 @@
             <tr>
                 <td></td>
                 <td colspan="{{ 1 + model.value.columns.length }}">
-                    <i class="icon icon-add" ng-click="addRow()"></i>
+                    <i class="icon icon-add" 
+                       ng-if="model.config.rowPermissions == 'addRemove'"
+                       ng-click="addRow()"></i>
                 </td>
             </tr>
        
