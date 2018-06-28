@@ -19,7 +19,7 @@ namespace Our.Umbraco.CheckboxTable.PropertyEditors
             "columnPermissions", 
             "Column Permissions", 
             "/App_Plugins/CheckboxTable/CheckboxTablePermissions.html",
-            Description = "Ccontent editor permissions for the column axis")]
+            Description = "Content editor permissions for the column axis")]
         public string ColumnPermissions { get; set; }
 
         [PreValueField(
